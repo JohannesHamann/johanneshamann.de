@@ -1,0 +1,28 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+    <h1>Forschreitender Verlauf des Kurses</h1>
+    <p class="important">
+        Im weiteren Verlauf des Kurses wurde ein Webserver mit Flask gestartet. Dieser läuft erstmal nur lokal und kann dafür genutzt werden unsere html-Dateien darzustellen.
+        Mitlerweile wurden viele unter Dateien erstellt und es ist wichtig, dass der Überblick darüber erhalten bleibt. </br>
+        Unter <strong>"templates"</strong> liegen alle <strong>html-Dateien</strong>. mit render_template("Dateiname") geht der Flask automatisch in den templates Ordner und kann
+        die angegebene html-Datei einlesen und darstellen. </br>
+        Unter <strong>"layouts"</strong> in "templates" liegt die main.html Datei. In ihr wird das Grundgerüst der Website beschrieben. Alle nötigen css-Dateien werden eingelesen
+        und der gesamte Inhalt wird bereits mit der skeleton klasse "container" gestyled. Die anderen html Dateien erben (inheriten) von der main datei über die Schreibweise
+        von "jinja". 
+    </p>
+
+    <p>
+        Über die URLs können auch Parameter übergeben werden. Wenn beispielsweise ein ?name=irgendein_Name in der URL steht, kann dieser abgefragt werden und weiter verarbeitet werden
+        Die soll hier geschehen. Nach diesem Satz wird der in der URL definierte Name angezeigt werden: </br>
+        {% if name!= None %}
+            <strong>{{name}}</strong>
+        {% endif %}
+    </p>
+    <p>
+        Falls die Variablen nicht definiert sind wird Python ein "None" an die Stelle setzen. Dies kann jedoch umgangen werden indem man eine if Bedingung abfragt: </br>
+        (In Python:) if name != None: tue etwas </br>
+        (In den html-files) {} % if name!= None % der code muss in die geschweifte Klammer (ist hier nicht, damit html es nicht direkt als klammer erkennt) und muss wieder 
+        geschlossenen werden über {} % endif %
+    </p>
+{% endblock %}

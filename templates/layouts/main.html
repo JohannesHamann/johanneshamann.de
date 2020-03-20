@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask - Projekt</title>
+    
+    <!-- mit "link rel" etc. wird auf die css Datei verwiesen, die für die Styles eingelesen werden soll. Es können mehrere Dateien eingelesen werden.-->
+    <link rel="stylesheet" href="/static/lib/css_styles.css" />
+    <link rel="stylesheet" href="/static/lib/skeleton/normalize.css" />
+    <link rel="stylesheet" href="/static/lib/skeleton/skeleton.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- hier wird die Navigation geschrieben als eine unordered-list die die Klasse "navigation" bekommt, sodass die css_datei dafür sorgt, dass die Elemente nebeneinander stehen.-->
+        <ul class ="navigation">
+            <li class="navigation_item">
+                <a href="/">Startseite</a>
+            </li>
+            <li class="navigation_item">
+                <a href="/test">Testseite</a>
+            </li>
+            <li class="navigation_item">
+                <a href="/formular">Formular abschicken</a>
+            </li>
+            <li class="navigation_item">
+                <a href="https://www.amazon.de/">Amazon</a>
+            </li>
+        </ul>
+        <div style="clear: both">&nbsp;</div>
+        
+        <!-- Hier wird der eigentliche content der jeweiligen Seiten eingesetzt-->
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>

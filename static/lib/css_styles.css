@@ -1,0 +1,25 @@
+p {
+    color: green
+}
+
+.important {
+    font-size: 25px;
+    font-style: oblique;
+}
+
+.test {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.navigation {
+    list-style-type: none;
+
+}
+
+.navigation_item {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}

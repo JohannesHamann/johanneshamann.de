@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %}
+    
+{% block content %}
+    <h1 class="important">
+    {{name}}
+    </br>
+    </br>
+        Gegen Ende des Projekts wurde von "http://getskeleton.com/" ein fertiges Grundgerüst herunntergeladen, was dazu führt, dass die Seite
+        sofort etwas besser aussieht, als durch einfachen HTML-Code. Über ein "div" von Klasse "container"  wurde dies erreicht, indem der gesamte html inhalt damit gewraped wurde
+        Die übrigen Absätze, Überschriften etc. wurden demnach zuvor generiert und sind dennoch relevant 
+    </h1>
+    <h1 class="important">
+        Ich bin eine Überschrift, die auch die Klasse "important" trägt zum verdeutlichen, dass jedes Element eine Klasse bekommen kann und wie ein Element
+        dieser Klasse behandelt wird.
+    </h1>
+            <p class="important">
+                Ich bin ein Absatz und man kann mit br/  <br/>
+                eine neue Zeile beginnen. <br/>
+                Jedem Elememnt kann eine Klasse zugeordnet werden. Dieser Absatz ist class="important" (Namensgebung beliebig) und mit einzelnen Klassen können in der css Datei
+                andere individuelle Größen/Styles festgelegt werden. über ./important {} kann dies gemacht werden. Hier wurde die Font_size auf 25px gesetzt.
+            </p>
+            <p>
+                Ich bin noch ein Absatz, nur damit man später ein wenig mehr mit dem Text spielen kann
+            </p>
+        
+    <!--Das div element soll scheinbar nichts tun, außer, dass es die Möglicheit bietet andere Sachen hineinzupacken und ihm eine Klasse zu geben, sodass alle Elemente -->
+    <!-- die im div stehen, diesen Klassen-Styles unterliegen. So kann beliebig geschachtelt werden. -->
+    <div class="test">
+        <h1> 
+            Hier eine weitere Überschrift
+        </h1>
+            <p>
+                Hier wurde jetzt Baukasten mit "div" geöffnet. "div" soll scheinbar keine eigene Bedeutung haben, aber soll dafür gut sein, gesamte Bereiche zusammenzufassen.
+                Genau wie alle anderen html Elemente kann das "div" einer Klasse zugeordnet werden (hier "test"). Alles was in das "div" hineingeschachtelt ist unterliegt dann
+                auch dieser Klasse. In diesem Fall wurde die Schriftart und -größe geändert, sowie der gesamte Bereich innerhalb des "div" unterstrichen dargestellt.   
+            </p>
+    </div>
+{% endblock %}

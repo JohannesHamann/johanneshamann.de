@@ -8,23 +8,22 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    return render_template("startseite.html")
 
-    out =  render_template("first_flask_project.html", name="Johannes Hamann")
-    return out
 @app.route("/test")
 def test():
     args = request.args
     name = request.args.get("name")
     alter = request.args.get("age")
     if name != None and alter != None:
-        print name + " ist " + alter + " Jahre alt."
+        print (name + " ist " + alter + " Jahre alt.")
     return render_template("test.html", name= name)
 
 @app.route("/formular")
 def formular():
     name = request.args.get("name")
     alter = request.args.get("age")
-    print name, alter
+    print (name, alter)
     return render_template("formular.html", name = name, age = alter)
 
 
